@@ -2,7 +2,7 @@
 
 Gem::Specification.new do |gem|
   gem.name         = "abstractive"
-  gem.version      = "0.0.1.pre0"
+  gem.version      = "0.0.1"
   gem.platform     = Gem::Platform::RUBY
   gem.summary      = "Base utilities and framework for Abstractive gems."
   gem.description  = "Base utilities and framework for Abstractive gems."
