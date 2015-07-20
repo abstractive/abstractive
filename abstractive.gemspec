@@ -1,16 +1,16 @@
 # -*- encoding: utf-8 -*-
 
 Gem::Specification.new do |gem|
-  gem.name         = "cellumon"
-  gem.version      = "0.4.0"
+  gem.name         = "abstractive"
+  gem.version      = "0.0.1.pre0"
   gem.platform     = Gem::Platform::RUBY
-  gem.summary      = "Monitor threads, processes, and states of Celluloid and its Actor System."
-  gem.description  = "Thread summary and reporting actor, utility for finding leaks and monitoring."
+  gem.summary      = "Base utilities and framework for Abstractive gems."
+  gem.description  = "Base utilities and framework for Abstractive gems."
   gem.licenses     = ["MIT"]
 
   gem.authors      = ["digitalextremist //"]
   gem.email        = ["code@extremist.digital"]
-  gem.homepage     = "https://github.com/abstractive/cellumon"
+  gem.homepage     = "https://github.com/abstractive/abstractive"
 
   gem.required_ruby_version     = ">= 1.9.2"
   gem.required_rubygems_version = ">= 1.3.6"
