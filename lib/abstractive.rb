@@ -7,7 +7,7 @@ module Abstractive
         const_get(actor.to_s.capitalize)
       end
     end
-    
+
     def shash(data)
       return unless data.is_a? Hash
       data.reduce({}) { |cleaned, (k, v)| cleaned.tap { |m| m[k.to_sym] = v } }
@@ -18,3 +18,5 @@ module Abstractive
     end
   end
 end
+
+require 'abstractive/additions'
