@@ -6,6 +6,6 @@ end
 
 class Hash
   def syke
-    self = Abstractive.shash(self)
+    self.replace(Abstractive.shash(self))
   end
 end

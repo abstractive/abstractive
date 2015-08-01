@@ -19,16 +19,13 @@ class Abstractive::Actor
     console(message, level: :debug)
   end
 
-  def exception(ex, message)
-    if @logger
-      @logger.exception(ex, message)
-    else
-      plain_output("(#{ex.class}) #{ex.message}: #{message}")
-    end
+  def exception(ex, *args)
+    return @logger.exception(ex, *args) if @logger
+    plain_output("(#{ex.class}) #{ex.message}: #{args.first}")
   rescue
-    plain_output("(#{ex.class}) #{ex.message}: #{message}")
+    plain_output("(#{ex.class}) #{ex.message}: #{args.first}")
   ensure
-    plain_output("(#{ex.class}) #{ex.message}: #{message}")
+    plain_output("(#{ex.class}) #{ex.message}: #{args.first}")
   end
 
   def plain_output(message)
@@ -39,6 +36,12 @@ class Abstractive::Actor
 
   def pretty_output object
     puts JSON.pretty_generate(object)
+  end
+
+  def mark
+    if @mark == true
+      "#{self.class.name} > "
+    end
   end
 
 end
